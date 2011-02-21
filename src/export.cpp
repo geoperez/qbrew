@@ -213,7 +213,7 @@ const QString Recipe::recipeHTML()
         html += "<td></td>\n";
         html += "<td>" + hop.type() + "</td>\n";
         html += "<td></td>\n";
-        html += "<td colspan=2>" + QString::number(hop.time()) + tr(" minutes</td>\n</tr>\n\n");
+        html += "<td colspan=2>" + QString::number(hop.time()) + tr("&nbsp;minutes</td>\n</tr>\n\n");
     }
 
     // misc ingredients
