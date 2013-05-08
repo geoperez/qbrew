@@ -33,7 +33,7 @@
 #ifndef HELPVIEWER_H
 #define HELPVIEWER_H
 
-#include <QMainWindow>
+#include <QtWidgets/QMainWindow>
 
 #include "ui_helpviewer.h"
 

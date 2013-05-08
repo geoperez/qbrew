@@ -7,7 +7,7 @@
   Please see the header file for copyright and license information
  ***************************************************************************/
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include "recipe.h"
 #include "resource.h"
 

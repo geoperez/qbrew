@@ -33,7 +33,7 @@
 #ifndef HOPDELEGATE_H
 #define HOPDELEGATE_H
 
-#include <QItemDelegate>
+#include <QtWidgets/QItemDelegate>
 
 // TODO: inherit from QStyleItemDelegate when available in 4.4
 

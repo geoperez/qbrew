@@ -32,10 +32,10 @@
 
 #include <cstdlib>
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include <QLibraryInfo>
 #include <QLocale>
-#include <QMainWindow>
+#include <QtWidgets/QMainWindow>
 #include <QStringList>
 #include <QTextStream>
 #include <QTranslator>

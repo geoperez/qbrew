@@ -7,7 +7,7 @@
   Please see the header file for copyright and license information
  ***************************************************************************/
 
-#include <QTextEdit>
+#include <QtWidgets/QTextEdit>
 
 #include "recipe.h"
 #include "notepage.h"

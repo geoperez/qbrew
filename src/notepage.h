@@ -32,7 +32,7 @@
 #ifndef NOTEPAGE_H
 #define NOTEPAGE_H
 
-#include <QWidget>
+#include <QtWidgets/QWidget>
 
 #include "ui_noteview.h"
 

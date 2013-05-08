@@ -33,7 +33,8 @@
 #ifndef QBREW_H
 #define QBREW_H
 
-#include <QMainWindow>
+#include <QtPrintSupport>
+#include <QtWidgets/QMainWindow>
 
 #include "ui_mainwindow.h"
 #include "configstate.h"

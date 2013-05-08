@@ -8,9 +8,9 @@
  ***************************************************************************/
 
 #include <QAbstractItemModel>
-#include <QDoubleSpinBox>
-#include <QLineEdit>
-#include <QSpinBox>
+#include <QtWidgets/QDoubleSpinBox>
+#include <QtWidgets/QLineEdit>
+#include <QtWidgets/QSpinBox>
 
 #include "data.h"
 #include "style.h"

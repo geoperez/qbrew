@@ -33,7 +33,7 @@
 #ifndef GRAINVIEW_H
 #define GRAINVIEW_H
 
-#include <QItemDelegate>
+#include <QtWidgets/QItemDelegate>
 
 // TODO: inherit from QStyleItemDelegate when available in 4.4
 

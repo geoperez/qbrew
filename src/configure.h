@@ -33,7 +33,7 @@
 #ifndef CONFIGURE_H
 #define CONFIGURE_H
 
-#include <QDialog>
+#include <QtWidgets/QDialog>
 #include "ui_calcconfig.h"
 #include "ui_generalconfig.h"
 #include "ui_recipeconfig.h"

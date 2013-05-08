@@ -8,9 +8,9 @@
  ***************************************************************************/
 
 #include <QAbstractItemModel>
-#include <QComboBox>
-#include <QDoubleSpinBox>
-#include <QSpinBox>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QDoubleSpinBox>
+#include <QtWidgets/QSpinBox>
 
 #include "data.h"
 #include "hop.h"

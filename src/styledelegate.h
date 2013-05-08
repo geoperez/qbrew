@@ -33,7 +33,7 @@
 #ifndef STYLEVIEW_H
 #define STYLEVIEW_H
 
-#include <QItemDelegate>
+#include <QtWidgets/QItemDelegate>
 
 // TODO: inherit from QStyleItemDelegate when available in 4.4
 

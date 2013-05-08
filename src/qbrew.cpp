@@ -7,7 +7,7 @@
   Please see the header file for copyright and license information.
 ***************************************************************************/
 
-#include <QtGui>
+#include <QtWidgets/QtWidgets>
 
 #include "alcoholtool.h"
 #include "configure.h"

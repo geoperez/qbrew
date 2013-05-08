@@ -33,7 +33,7 @@
 #ifndef DATABASETOOL_H
 #define DATABASETOOL_H
 
-#include <QMainWindow>
+#include <QtWidgets/QMainWindow>
 
 #include "ui_databasetool.h"
 #include "ui_ingredientpage.h"

@@ -31,7 +31,7 @@
   OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
  ***************************************************************************/
 
-#include <QDialog>
+#include <QtWidgets/QDialog>
 #include "ui_hydrometertool.h"
 
 class HydrometerTool : public QDialog {

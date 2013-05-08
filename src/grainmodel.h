@@ -43,7 +43,7 @@ class GrainModel : public QAbstractTableModel {
     Q_OBJECT
 public:
     // model columns
-    enum { NAME, WEIGHT, EXTRACT, COLOR, TYPE, USE, COUNT };
+    enum { NAME, WEIGHT, EXTRACT, COLOR, TYPE, USE, PERCENT, COUNT };
 
     GrainModel(QObject *parent, GrainList *list);
     ~GrainModel();

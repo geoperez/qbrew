@@ -7,8 +7,8 @@
   Please see the header file for copyright and license information
  ***************************************************************************/
 
-#include <QApplication>
-#include <QInputDialog>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QInputDialog>
 #include "data.h"
 #include "recipe.h"
 #include "resource.h"

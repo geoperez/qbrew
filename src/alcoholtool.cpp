@@ -8,7 +8,7 @@
   Please see the header file for copyright and license information
  ***************************************************************************/
 
-#include <QLabel>
+#include <QtWidgets/QLabel>
 
 #include "recipe.h"
 #include "resource.h"

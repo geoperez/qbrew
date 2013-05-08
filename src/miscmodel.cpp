@@ -7,8 +7,8 @@
   Please see the header file for copyright and license information
  ***************************************************************************/
 
-#include <QApplication>
-#include <QMessageBox>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMessageBox>
 #include <QPair>
 
 #include "data.h"
@@ -34,7 +34,7 @@ MiscModel::~MiscModel() {}
 
 void MiscModel::flush()
 {
-    reset();
+    //reset();
 }
 
 //////////////////////////////////////////////////////////////////////////////

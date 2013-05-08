@@ -32,7 +32,7 @@
 #define TEXTPRINTER_H
 
 #include <QObject>
-#include <QPrinter>
+#include <QtPrintSupport/QPrinter>
 
 class QTextDocument;
 class QWidget;

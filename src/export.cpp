@@ -7,12 +7,12 @@
   Please see the header file for copyright and license information.
  ***************************************************************************/
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include <QFile>
-#include <QInputDialog>
+#include <QtWidgets/QInputDialog>
 #include <QLocale>
-#include <QMessageBox>
-#include <QPrinter>
+#include <QtWidgets/QMessageBox>
+#include <QtPrintSupport/QPrinter>
 #include <QTextDocument>
 #include <QTextStream>
 
@@ -468,3 +468,4 @@ bool Recipe::exportPdf(TextPrinter *textprinter, const QString &filename)
     }
     return false;
 }
+

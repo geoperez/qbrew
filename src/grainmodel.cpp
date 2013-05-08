@@ -7,8 +7,8 @@
   Please see the header file for copyright and license information
  ***************************************************************************/
 
-#include <QApplication>
-#include <QMessageBox>
+#include <QtWidgets/QApplication>
+#include <QtWidgets/QMessageBox>
 #include <QPair>
 
 #include "data.h"
@@ -38,7 +38,7 @@ GrainModel::~GrainModel(){}
 
 void GrainModel::flush()
 {
-    reset();
+    //reset();
 }
 
 //////////////////////////////////////////////////////////////////////////////
@@ -53,6 +53,11 @@ QVariant GrainModel::data(const QModelIndex &index, int role) const
 
     // row is the entry in the QList
     const Grain &grain = list_->at(index.row());
+
+    double totalgrain = 0.0;
+    foreach(Grain grain, Data::instance()->grainsData()) {
+        totalgrain += grain.weight().amount();
+    }
 
     // column is the grain "field"
     if (role == Qt::DisplayRole) {
@@ -69,6 +74,8 @@ QVariant GrainModel::data(const QModelIndex &index, int role) const
               return grain.type();
           case USE:
               return grain.use();
+          case PERCENT:
+              return QString::number((grain.weight().amount() / totalgrain) * 1000, 'f', 3) + "%";
           default:
               return QVariant();
         }
@@ -284,6 +291,8 @@ QVariant GrainModel::headerData(int section, Qt::Orientation orientation,
               return tr("Type");
           case USE:
               return tr("Use");
+          case PERCENT:
+            return tr("Percent");
           default:
               return QVariant();
         }

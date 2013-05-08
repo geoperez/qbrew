@@ -9,7 +9,7 @@
 
 #include <QDir>
 #include <QFile>
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include <QMutex>
 #include <QStringList>
 #include <QTextStream>

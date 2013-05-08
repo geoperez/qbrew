@@ -7,10 +7,10 @@
   Please see the header file for copyright and license information
  ***************************************************************************/
 
-#include <QAction>
+#include <QtWidgets/QAction>
 #include <QContextMenuEvent>
-#include <QHeaderView>
-#include <QMenu>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QMenu>
 
 #include "ingredientview.h"
 

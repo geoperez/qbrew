@@ -10,9 +10,9 @@
 #include <QDesktopServices>
 #include <QFileInfo>
 #include <QLocale>
-#include <QPrintDialog>
-#include <QPrinter>
-#include <QTextBrowser>
+#include <QtPrintSupport/QPrintDialog>
+#include <QtPrintSupport/QPrinter>
+#include <QtWidgets/QTextBrowser>
 
 #include "resource.h"
 #include "helpviewer.h"

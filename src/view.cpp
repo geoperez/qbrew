@@ -7,8 +7,8 @@
   Please see the header file for copyright and license information
  ***************************************************************************/
 
-#include <QHeaderView>
-#include <QTableView>
+#include <QtWidgets/QHeaderView>
+#include <QtWidgets/QTableView>
 #include <QLocale>
 
 #include "data.h"
@@ -72,7 +72,7 @@ View::View(QWidget *parent, Recipe *recipe)
 
     grainpage.view->verticalHeader()->setDefaultSectionSize(mh);
     grainpage.view->verticalHeader()->hide();
-    grainpage.view->horizontalHeader()->setClickable(true);
+    //grainpage.view->horizontalHeader()->setClickable(true);
     grainpage.view->horizontalHeader()->setHighlightSections(false);
 
     grainpage.view->setColumnWidth(GrainModel::NAME, 20*mw);
@@ -81,6 +81,7 @@ View::View(QWidget *parent, Recipe *recipe)
     grainpage.view->setColumnWidth(GrainModel::COLOR, 8*mw);
     grainpage.view->setColumnWidth(GrainModel::TYPE, 8*mw);
     grainpage.view->setColumnWidth(GrainModel::USE, 8*mw);
+    grainpage.view->setColumnWidth(GrainModel::PERCENT, 8*mw);
 
     // hop page
     widget = new QWidget();
@@ -94,7 +95,7 @@ View::View(QWidget *parent, Recipe *recipe)
 
     hoppage.view->verticalHeader()->setDefaultSectionSize(mh);
     hoppage.view->verticalHeader()->hide();
-    hoppage.view->horizontalHeader()->setClickable(true);
+    //hoppage.view->horizontalHeader()->setClickable(true);
     hoppage.view->horizontalHeader()->setHighlightSections(false);
 
     hoppage.view->setColumnWidth(HopModel::NAME, 20*mw);
@@ -115,7 +116,7 @@ View::View(QWidget *parent, Recipe *recipe)
 
     miscpage.view->verticalHeader()->setDefaultSectionSize(mh);
     miscpage.view->verticalHeader()->hide();
-    miscpage.view->horizontalHeader()->setClickable(true);
+    //miscpage.view->horizontalHeader()->setClickable(true);
     miscpage.view->horizontalHeader()->setHighlightSections(false);
 
     miscpage.view->setColumnWidth(MiscModel::NAME, 20*mw);

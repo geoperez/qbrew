@@ -7,8 +7,8 @@
   Please see the header file for copyright and licehnse information
  ***************************************************************************/
 
-#include <QDialogButtonBox>
-#include <QStyleFactory>
+#include <QtWidgets/QDialogButtonBox>
+#include <QtWidgets/QStyleFactory>
 
 #include "configure.h"
 #include "data.h"

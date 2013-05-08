@@ -32,7 +32,7 @@
 #ifndef INGREDIENTVIEW_H
 #define INGREDIENTVIEW_H
 
-#include <QTableView>
+#include <QtWidgets/QTableView>
 
 class QAction;
 

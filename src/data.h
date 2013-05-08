@@ -86,6 +86,7 @@ public:
     void setDefaultTempUnit(Unit &u);
 
     // return stringlists of data
+    GrainMap grainsData();
     QStringList stylesList();
     QStringList grainsList();
     QStringList hopsList();
@@ -163,6 +164,8 @@ private:
 };
 
 // Inlined Methods ///////////////////////////////////////////////////////////
+
+inline GrainMap Data::grainsData() { return grainmap_; }
 
 inline const QString &Data::defaultHopType() const { return defaulthoptype_; }
 

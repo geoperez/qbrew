@@ -33,7 +33,7 @@
 #ifndef MISCDELEGATE_H
 #define MISCDELEGATE_H
 
-#include <QItemDelegate>
+#include <QtWidgets/QItemDelegate>
 
 // TODO: inherit from QStyleItemDelegate when available in 4.4
 

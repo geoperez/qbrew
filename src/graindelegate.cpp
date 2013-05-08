@@ -8,8 +8,8 @@
  ***************************************************************************/
 
 #include <QAbstractItemModel>
-#include <QComboBox>
-#include <QDoubleSpinBox>
+#include <QtWidgets/QComboBox>
+#include <QtWidgets/QDoubleSpinBox>
 
 #include "data.h"
 #include "grain.h"

@@ -9,15 +9,15 @@
 
 #include <QAbstractTextDocumentLayout>
 #include <QDate>
-#include <QFileDialog>
+#include <QtWidgets/QFileDialog>
 #include <QLocale>
 #include <QPainter>
-#include <QPrintDialog>
+#include <QtPrintSupport/QPrintDialog>
 #include <QTextDocument>
 #include <QTextFrame>
 
 #if (QT_VERSION >= QT_VERSION_CHECK(4, 4, 0))
-#include <QPrintPreviewDialog>
+#include <QtPrintSupport/QPrintPreviewDialog>
 #endif
 
 static inline double mmToInches(double mm) { return mm * 0.039370147; }

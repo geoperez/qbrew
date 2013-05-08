@@ -9,9 +9,9 @@
 
 #include <cmath>
 
-#include <QApplication>
+#include <QtWidgets/QApplication>
 #include <QFile>
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include <QTextDocument>
 #include <QTextStream>
 
