@@ -583,3 +583,13 @@ bool Recipe::modified() const
 {
     return modified_;
 }
+
+double Recipe::totalWeight()
+{
+    double totalgrain = 0.0;
+    foreach(Grain grain, grains_) {
+        totalgrain += grain.weight().amount();
+    }
+
+    return totalgrain;
+}

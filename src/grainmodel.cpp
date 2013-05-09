@@ -15,6 +15,7 @@
 #include "recipe.h"
 #include "resource.h"
 #include "grainmodel.h"
+#include "qbrew.h"
 
 using namespace Resource;
 
@@ -54,11 +55,6 @@ QVariant GrainModel::data(const QModelIndex &index, int role) const
     // row is the entry in the QList
     const Grain &grain = list_->at(index.row());
 
-    double totalgrain = 0.0;
-    foreach(Grain grain, Data::instance()->grainsData()) {
-        totalgrain += grain.weight().amount();
-    }
-
     // column is the grain "field"
     if (role == Qt::DisplayRole) {
         switch (index.column()) {
@@ -75,7 +71,7 @@ QVariant GrainModel::data(const QModelIndex &index, int role) const
           case USE:
               return grain.use();
           case PERCENT:
-              return QString::number((grain.weight().amount() / totalgrain) * 1000, 'f', 3) + "%";
+            return  QString::number(grain.weight().amount() / QBrew::instance()->recipe()->totalWeight() * 100, 'f', 2) + "%";
           default:
               return QVariant();
         }

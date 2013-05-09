@@ -33,7 +33,6 @@
 #ifndef QBREW_H
 #define QBREW_H
 
-#include <QtPrintSupport>
 #include <QtWidgets/QMainWindow>
 
 #include "ui_mainwindow.h"
@@ -65,6 +64,8 @@ class QBrew : public QMainWindow {
     QString docBase();
     // return the base dir for the data files
     QString dataBase();
+
+    Recipe *recipe();
 
  private slots:
     // generate a new recipe

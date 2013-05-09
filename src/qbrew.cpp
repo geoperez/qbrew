@@ -1313,3 +1313,8 @@ QString QBrew::docBase()
 #endif
     return QDir::cleanPath(base) + "/";
 }
+
+Recipe *QBrew::recipe()
+{
+    return recipe_;
+}

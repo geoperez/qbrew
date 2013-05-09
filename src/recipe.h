@@ -133,6 +133,9 @@ public:
     static double extractToYield(double extract);
     static double yieldToExtract(double yield);
 
+    // percent
+    double totalWeight();
+
     // is the recipe modified?
     bool modified() const;
 
