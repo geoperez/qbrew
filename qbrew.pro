@@ -116,7 +116,8 @@ HEADERS = alcoholtool.h \
 	styledelegate.h \
 	stylemodel.h \
 	textprinter.h \
-	view.h
+	view.h \
+        primingtool.h
 
 SOURCES = alcoholtool.cpp \
         beerxmlreader.cpp \
@@ -147,7 +148,8 @@ SOURCES = alcoholtool.cpp \
 	styledelegate.cpp \
 	stylemodel.cpp \
 	textprinter.cpp \
-	view.cpp
+	view.cpp \
+        primingtool.cpp
 
 FORMS = alcoholtool.ui \
 	calcconfig.ui \
@@ -159,6 +161,7 @@ FORMS = alcoholtool.ui \
 	mainwindow.ui \
 	noteview.ui \
 	recipeconfig.ui \
-	view.ui
+	view.ui \
+        primingtool.ui
 
 TRANSLATIONS = translations/qbrew_de.ts

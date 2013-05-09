@@ -50,6 +50,7 @@ class HydrometerTool;
 class Recipe;
 class TextPrinter;
 class View;
+class PrimingTool;
 
 class QBrew : public QMainWindow {
     Q_OBJECT
@@ -64,7 +65,7 @@ class QBrew : public QMainWindow {
     QString docBase();
     // return the base dir for the data files
     QString dataBase();
-
+    // return the recipe
     Recipe *recipe();
 
  private slots:
@@ -91,6 +92,8 @@ class QBrew : public QMainWindow {
     void toolsHydrometer();
     // show the database tool
     void toolsDatabase();
+    // show the priming tool
+    void toolsPriming();
 
     // toggle the statusbar
     void optionsStatusbar(bool on);
@@ -175,6 +178,7 @@ private:
     AlcoholTool* alcoholtool_;
     DatabaseTool* databasetool_;
     HydrometerTool* hydrometertool_;
+    PrimingTool* primingtool_;
     Configure* configure_;
     HelpViewer* handbook_;
     HelpViewer* primer_;

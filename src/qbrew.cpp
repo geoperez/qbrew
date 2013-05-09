@@ -19,6 +19,7 @@
 #include "resource.h"
 #include "textprinter.h"
 #include "view.h"
+#include "primingtool.h"
 
 #include "qbrew.h"
 
@@ -40,7 +41,7 @@ QBrew::QBrew()
     : data_(0), recipe_(0), view_(0), alcoholtool_(0), databasetool_(0),
       hydrometertool_(0), configure_(0), handbook_(0), primer_(0), state_(),
       filename_(), newflag_(false), backed_(false), autosave_(0),
-      autosavename_(), textprinter_(0)
+      autosavename_(), textprinter_(0), primingtool_(0)
 { ; }
 
 //////////////////////////////////////////////////////////////////////////////
@@ -145,6 +146,7 @@ QBrew::~QBrew()
     if (alcoholtool_) alcoholtool_->close();
     if (hydrometertool_) hydrometertool_->close();
     if (databasetool_) databasetool_->close();
+    if (primingtool_) primingtool_->close();
     if (configure_) configure_->close();
     if (handbook_) handbook_->close();
     if (primer_) primer_->close();
@@ -579,6 +581,17 @@ void QBrew::toolsDatabase()
     databasetool_->raise();
     if (databasetool_->isMinimized()) databasetool_->showNormal();
 
+    statusBar()->showMessage(tr(READY), 2000);
+}
+
+void QBrew::toolsPriming()
+{
+    /*
+     *if (!primingtool_) primingtool_  = new PrimingTool(this);
+    primingtool_->show();
+    primingtool_->raise();
+    if (primingtool_->isMinimized()) primingtool_->showNormal();
+*/
     statusBar()->showMessage(tr(READY), 2000);
 }
 
