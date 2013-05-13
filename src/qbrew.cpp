@@ -196,6 +196,8 @@ void QBrew::initActions()
             this, SLOT(toolsHydrometer()));
     connect(ui.actiondatabasetool, SIGNAL(triggered()),
             this, SLOT(toolsDatabase()));
+    connect(ui.actionprimingtool, SIGNAL(triggered()),
+            this, SLOT(toolsPriming()));
 
     connect(ui.actiontogglestatusbar, SIGNAL(toggled(bool)),
             this, SLOT(optionsStatusbar(bool)));
@@ -586,12 +588,12 @@ void QBrew::toolsDatabase()
 
 void QBrew::toolsPriming()
 {
-    /*
-     *if (!primingtool_) primingtool_  = new PrimingTool(this);
+
+     if (!primingtool_) primingtool_  = new PrimingTool(this);
     primingtool_->show();
     primingtool_->raise();
     if (primingtool_->isMinimized()) primingtool_->showNormal();
-*/
+
     statusBar()->showMessage(tr(READY), 2000);
 }
 

@@ -1,7 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <author/>
- <comment/>
- <exportmacro/>
  <class>PrimingTool</class>
  <widget class="QDialog" name="PrimingTool">
   <property name="geometry">
@@ -9,17 +7,17 @@
     <x>0</x>
     <y>0</y>
     <width>400</width>
-    <height>300</height>
+    <height>358</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>Dialog</string>
+   <string>Priming Calculator</string>
   </property>
   <widget class="QDialogButtonBox" name="buttonBox">
    <property name="geometry">
     <rect>
-     <x>30</x>
-     <y>240</y>
+     <x>50</x>
+     <y>330</y>
      <width>341</width>
      <height>32</height>
     </rect>
@@ -28,11 +26,93 @@
     <enum>Qt::Horizontal</enum>
    </property>
    <property name="standardButtons">
-    <set>QDialogButtonBox::Cancel|QDialogButtonBox::Ok</set>
+    <set>QDialogButtonBox::Ok</set>
    </property>
   </widget>
+  <widget class="QWidget" name="formLayoutWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>10</y>
+     <width>381</width>
+     <height>111</height>
+    </rect>
+   </property>
+   <layout class="QFormLayout" name="formLayout">
+    <item row="1" column="0">
+     <widget class="QLabel" name="volumeOfCO2Label">
+      <property name="text">
+       <string>Volume of CO2</string>
+      </property>
+     </widget>
+    </item>
+    <item row="1" column="1">
+     <widget class="QSpinBox" name="volumeOfCO2SpinBox"/>
+    </item>
+    <item row="2" column="0">
+     <widget class="QLabel" name="currentTemperatureOfBeerLabel">
+      <property name="text">
+       <string>Current Temperature of beer</string>
+      </property>
+     </widget>
+    </item>
+    <item row="2" column="1">
+     <widget class="QSpinBox" name="currentTemperatureOfBeerSpinBox"/>
+    </item>
+    <item row="3" column="0">
+     <widget class="QLabel" name="volumeOfBeerLabel">
+      <property name="text">
+       <string>Volume of beer</string>
+      </property>
+     </widget>
+    </item>
+    <item row="3" column="1">
+     <widget class="QSpinBox" name="volumeOfBeerSpinBox"/>
+    </item>
+    <item row="0" column="0">
+     <widget class="QLabel" name="styleLabel">
+      <property name="text">
+       <string>Style</string>
+      </property>
+     </widget>
+    </item>
+    <item row="0" column="1">
+     <widget class="QComboBox" name="styleComboBox">
+      <item>
+       <property name="text">
+        <string notr="true">American Amber Ale</string>
+       </property>
+      </item>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <widget class="QTableWidget" name="tableWidget">
+   <property name="geometry">
+    <rect>
+     <x>10</x>
+     <y>130</y>
+     <width>381</width>
+     <height>192</height>
+    </rect>
+   </property>
+   <column>
+    <property name="text">
+     <string>Sugar</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Amount (oz)</string>
+    </property>
+   </column>
+   <column>
+    <property name="text">
+     <string>Amount (grams)</string>
+    </property>
+   </column>
+  </widget>
  </widget>
- <pixmapfunction/>
  <resources/>
  <connections>
   <connection>

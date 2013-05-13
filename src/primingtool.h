@@ -1,7 +1,7 @@
 #ifndef PRIMINGTOOL_H
 #define PRIMINGTOOL_H
 
-#include <QDialog>
+#include <QtWidgets/QDialog>
 
 namespace Ui {
 class PrimingTool;
