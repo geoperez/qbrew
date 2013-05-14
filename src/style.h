@@ -44,7 +44,8 @@ public:
     // constructor
     Style(const QString name, const double &oglow, const double &oghi,
           const double &fglow, const double &fghi, const int &ibulow,
-          const int &ibuhi, const int &srmlow, const int &srmhi);
+          const int &ibuhi, const int &srmlow, const int &srmhi,
+          const double &co2);
     // copy constructor
     Style(const Style &s);
     // operators
@@ -81,7 +82,10 @@ public:
     // return low end of SRM
     int SRMLow() const;
     void setSRMLow(int lo);
-    
+    // return CO2
+    double CO2() const;
+    void setCO2(double val);
+
 private:
     friend class StyleModel;
 
@@ -94,6 +98,7 @@ private:
     int ibuhi_;
     int srmlow_;
     int srmhi_;
+    double co2_;
 };
 
 typedef QList<Style> StyleList;
@@ -131,5 +136,8 @@ inline void Style::setSRMHi(int hi) { srmhi_ = hi; }
 
 inline int Style::SRMLow() const { return srmlow_; }
 inline void Style::setSRMLow(int lo) { srmlow_ = lo; }
+
+inline double Style::CO2() const { return co2_; }
+inline void Style::setCO2(double val) { co2_ = val; }
 
 #endif // STYLE_H

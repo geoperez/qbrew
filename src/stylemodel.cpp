@@ -71,6 +71,8 @@ QVariant StyleModel::data(const QModelIndex &index, int role) const
               return QString::number(style.srmlow_);
           case SRMHI:
               return QString::number(style.srmhi_);
+          case CO2:
+            return QString::number(style.co2_, 'f', 3);
           default:
               return QVariant();
         }
@@ -94,6 +96,8 @@ QVariant StyleModel::data(const QModelIndex &index, int role) const
               return style.srmlow_;
           case SRMHI:
               return style.srmhi_;
+          case CO2:
+            return style.co2_;
           default:
               return QVariant();
         }
@@ -200,6 +204,10 @@ bool StyleModel::setData(const QModelIndex &index,
           style.srmhi_ = value.toUInt();
           break;
 
+      case CO2:
+          style.co2_ = value.toDouble();
+          break;
+
       default:
           return false;
     }
@@ -286,6 +294,8 @@ QVariant StyleModel::headerData(int section, Qt::Orientation orientation,
               return tr("Min. SRM");
           case SRMHI:
               return tr("Max. SRM");
+          case CO2:
+            return tr("CO2 Volumen");
            default:
               return QVariant();
         }

@@ -73,6 +73,16 @@ QWidget *StyleDelegate::createEditor(QWidget *parent,
           spin->installEventFilter(const_cast<StyleDelegate*>(this));
           return spin;
 
+    case StyleModel::CO2:
+        if (blank) return 0;
+        dspin = new QDoubleSpinBox(parent);
+        dspin->setDecimals(3);
+        dspin->setRange(0.1, 3.0);
+        dspin->setSingleStep(0.1);
+        dspin->setAccelerated(true);
+        dspin->installEventFilter(const_cast<StyleDelegate*>(this));
+        return dspin;
+
       default:
           return 0;
     }
@@ -99,6 +109,7 @@ void StyleDelegate::setEditorData(QWidget *editor,
       case StyleModel::OGHI:
       case StyleModel::FGLOW:
       case StyleModel::FGHI:
+      case StyleModel::CO2:
           dspin = static_cast<QDoubleSpinBox*>(editor);
           if (!dspin) return;
           dspin->setValue(value.toDouble());
@@ -139,6 +150,7 @@ void StyleDelegate::setModelData(QWidget *editor, QAbstractItemModel *model,
       case StyleModel::OGHI:
       case StyleModel::FGLOW:
       case StyleModel::FGHI:
+      case StyleModel::CO2:
           dspin = static_cast<QDoubleSpinBox*>(editor);
           if (!dspin) return;
           value = dspin->value();

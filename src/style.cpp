@@ -29,9 +29,9 @@ Style::Style()
 Style::Style(const QString name, const double &oglow, const double &oghi,
              const double &fglow, const double &fghi,
              const int &ibulow, const int &ibuhi,
-             const int &srmlow, const int &srmhi)
+             const int &srmlow, const int &srmhi, const double &co2)
     : name_(name), oglow_(oglow), oghi_(oghi), fglow_(fglow), fghi_(fghi),
-      ibulow_(ibulow), ibuhi_(ibuhi), srmlow_(srmlow), srmhi_(srmhi)
+      ibulow_(ibulow), ibuhi_(ibuhi), srmlow_(srmlow), srmhi_(srmhi), co2_(co2)
 {
     // older qbrewdata files might not have FG values
     if (fglow_ == 0.0) fglow_ = ((oglow_ - 1.0) * 0.25) + 1.0;
@@ -41,7 +41,7 @@ Style::Style(const QString name, const double &oglow, const double &oghi,
 Style::Style(const Style &s)
     : name_(s.name_), oglow_(s.oglow_), oghi_(s.oghi_), fglow_(s.fglow_),
       fghi_(s.fghi_), ibulow_(s.ibulow_), ibuhi_(s.ibuhi_),
-      srmlow_(s.srmlow_), srmhi_(s.srmhi_)
+      srmlow_(s.srmlow_), srmhi_(s.srmhi_), co2_(s.co2_)
 { ; }
 
 Style::~Style() { ; }
